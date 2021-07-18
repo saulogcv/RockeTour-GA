@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>RockeTour - SPACE SHUTTLE</title>
+        <link rel="stylesheet" href="/resources/style.css">
+        <meta name="Author" description="Saulo Guedes">
+        
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="resources/logort.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Whats New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>              
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just a trip<br>It's <span>RockeTour.</span></h2>    
+                <p>
+                    This year, we’ll be making a limited number of tickets available for future spaceflights. 
+                    Take the leap with us as we get one step closer to filling the world with astronauts.</p>
+
+            </div>
+            <div class=ïmgBox">
+                <img src="/resources/aircraft.png" class="aircraft"
+            </div>
+            
+        </div>
+    </section>
+</body>
+<footer>
+    <form role="form" onsubmit="signUp(event);">
+        <div class="form-group">
+          <h2>Be an Astronaut</h2>
+          <p>Subscribe to receive the latest news about our travel to the space</p>
+        </div>
+      
+        <div class="form-group" style="background-color:white">
+          <input type="text" placeholder="Name" name="name" id="name" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Email address" name="mail" id="mail" required>
+        </div>
+      
+        <div class="container">
+          <input type="submit" value="Subscribe to the Space">
+        </div>
+      </form>
+      <script type="text/javascript">
+        const signUp = e => {
+            let formData = {
+                name: document.getElementById('name').value,
+                mail: document.getElementById('mail').value,
+            }
+            localStorage.setItem('formData',JSON.stringify(formData));
+            console.log(localStorage.getItem('formData'));
+            
+        }
+    </script>
+</footer>
+</head>
+</html>
